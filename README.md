@@ -24,11 +24,8 @@ sudo apt-get install build-essential libsdl2-dev -y
 ```
 1、指定交叉编译工具链工具链库位置
 修改build.sh中toolchain_path的位置，改为你本机路径
-toolchain_path="/home/xiaozhi/t113-v1.1/prebuilt/rootfsbuilt/arm/toolchain-sunxi-glibc-gcc-830/toolchain/bin"
 
 2、编译相关
-编译t113应用
-./build.sh -t113
 编译linux应用
 ./build.sh -linux
 删除编译信息

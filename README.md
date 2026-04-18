@@ -1,5 +1,4 @@
 ##部分功能
-```
 
 主界面
 <img width="1196" height="727" alt="QQ_1776513374905" src="https://github.com/user-attachments/assets/1f5e1c57-b0c3-49f0-a3d7-e956dc83c5b9" />
@@ -10,7 +9,7 @@
 AI助手
 <img width="1191" height="733" alt="QQ_1776513656405" src="https://github.com/user-attachments/assets/2ba0398a-f834-404f-b663-402966030533" />
 
-```
+
 # README
 
 ## 环境要求

@@ -1,6 +1,6 @@
 MiniQQ - 基于 LVGL 的即时通讯应用
 
-MiniQQ 是一个基于 LVGL (Light and Versatile Graphics Library) 图形库开发（模拟器）的即时通讯演示项目。本项目包含客户端 (app_client) 和服务端 (app_server) 两部分，旨在展示如何在 Linux 平台上实现流畅的 GUI 交互和网络通信。
+MiniQQ 是一个基于 LVGL (Light and Versatile Graphics Library) 图形库开发（模拟器）的即时通讯演示项目。本项目包含客户端 (app_client) 和服务端 (app_server) 两部分，核心功能包括:登录、注册、查看实时天气、AI助手、添加好友、创建群聊、私聊、群聊、历史消息等，旨在展示如何在 Linux 平台上实现流畅的 GUI 交互和网络通信。
 
 📂 项目结构
  ```

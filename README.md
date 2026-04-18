@@ -127,15 +127,11 @@ sudo apt-get install build-essential libsdl2-dev -y
 build/app/demo
 
 4、推到设备端运行即可
-adb push platform/t113/lib/* /usr/lib/  #仅第一次需要push，不修改无需重新push
 adb push build/app/res/* /usr/res/      #仅第一次需要push，不修改无需重新push
 adb push build/app/demo /usr/bin/
 
  vi /etc/init.d/rc.final 
  ./usr/bin/demo & 
 修改后，记得保存，最好用reboot重启确保可以完全写入
-
-
-<img width="811" height="493" alt="QQ_1776513066416" src="https://github.com/user-attachments/assets/2693d304-d149-4e89-81e0-48882926da55" />
 
 ```

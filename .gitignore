@@ -1,0 +1,61 @@
+# 1. 排除指定的其他项目文件夹
+
+app/
+app1/
+app2/
+app3/
+app4/
+CMakeTest/
+
+
+# 2. 排除常见的编译产物和临时文件
+
+# CMake 构建目录
+build/
+cmake-build-debug/
+cmake-build-release/
+
+# 编译生成的中间文件和目标文件
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Makefile 生成文件
+Makefile
+CMakeCache.txt
+CMakeFiles/
+
+
+# 3. 排除 IDE 和编辑器配置
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+
+# 4. 排除敏感环境配置文件 (重要!)
+
+# 建议保留 .env.example 作为模板，但忽略真实的 .env
+.env
+*.key
+*.pem
+*.crt
+*.secret
+
+
+# 5. 其他可能存在的日志或临时数据
+
+*.log
+tmp/
+temp/

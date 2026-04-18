@@ -1,6 +1,6 @@
 MiniQQ - 基于 LVGL 的即时通讯应用
 
-MiniQQ 是一个基于 LVGL (Light and Versatile Graphics Library) 图形库开发（模拟器）的嵌入式即时通讯演示项目。本项目包含客户端 (app_client) 和服务端 (app_server) 两部分，旨在展示如何在 Linux 平台上实现流畅的 GUI 交互和网络通信。
+MiniQQ 是一个基于 LVGL (Light and Versatile Graphics Library) 图形库开发（模拟器）的即时通讯演示项目。本项目包含客户端 (app_client) 和服务端 (app_server) 两部分，旨在展示如何在 Linux 平台上实现流畅的 GUI 交互和网络通信。
 
 📂 项目结构
  ```
@@ -19,77 +19,6 @@ app_sdk/
 网络通信：使用 libcurl 进行 HTTP/WebSocket 通信，实现消息收发。
 平台支持：支持在 PC Linux 上模拟运行。
 模块化设计：客户端与服务端分离，便于独立开发和调试。
-🛠️ 前置要求
-在编译之前，请确保您的开发环境满足以下条件：
-
-操作系统: Ubuntu 18.04+ 
-编译器: GCC >= 7.0 或 Clang >= 10.0 (交叉编译需安装对应架构的工具链)
-构建工具: CMake >= 3.10, Make
-依赖库:
-libpng, libjpeg, freetype (LVGL 所需图像/字体支持)
-zlib, openssl (Libcurl 所需)
-📦 编译与运行
-1. 获取代码
-bash
-git clone https://github.com/fanjinshan/MiniQQ.git
-cd MiniQQ
-2. 初始化依赖
-如果 lvgl 和 libcurl 是作为 Git Submodule 管理的，请执行：
-
-bash
-git submodule update --init --recursive
-
-3. 编译 App Client (客户端)
-bash
-mkdir -p build_client && cd build_client
-
-# 配置项目 (如果是交叉编译，请添加 -DCMAKE_TOOLCHAIN_FILE=...)
-cmake ../app_client
-
-# 编译
-make -j$(nproc)
-
-# 运行
-./app_client
-4. 编译 App Server (服务端)
-bash
-mkdir -p build_server && cd build_server
-
-# 配置项目
-cmake ../app_server
-
-# 编译
-make -j$(nproc)
-
-# 运行
-./app_server
-
-⚙️ 配置说明
-项目使用环境变量或配置文件进行管理。首次运行前，建议复制示例配置：
-
-bash
-cp app_client/.env.example app_client/.env
-cp app_server/.env.example app_server/.env
-编辑 .env 文件以设置：
-
-SERVER_IP: 服务端 IP 地址
-SERVER_PORT: 服务端监听端口
-LVGL_DISP_WIDTH/HEIGHT: 屏幕分辨率
-
-##部分功能
-
-主界面
-<img width="1196" height="727" alt="QQ_1776513374905" src="https://github.com/user-attachments/assets/1f5e1c57-b0c3-49f0-a3d7-e956dc83c5b9" />
-
-私聊
-<img width="1833" height="730" alt="QQ_1776513506079" src="https://github.com/user-attachments/assets/a5370038-895b-4bdf-8ca2-9a3a631bafb6" />
-
-AI助手
-<img width="1191" height="733" alt="QQ_1776513656405" src="https://github.com/user-attachments/assets/2ba0398a-f834-404f-b663-402966030533" />
-
-
-# README
-
 ## 环境要求
 
 ```
@@ -107,6 +36,17 @@ $ cmake --version
 sudo apt-get install build-essential libsdl2-dev -y
 
 ```
+
+📦 编译与运行
+1. 获取代码
+bash
+git clone https://github.com/fanjinshan/MiniQQ.git
+cd MiniQQ
+2. 初始化依赖
+如果 lvgl 和 libcurl 是作为 Git Submodule 管理的，请执行：
+
+bash
+git submodule update --init --recursive
 
 ## 编译说明
 
@@ -135,3 +75,33 @@ adb push build/app/demo /usr/bin/
 修改后，记得保存，最好用reboot重启确保可以完全写入
 
 ```
+# 运行
+./app_server
+./app_client
+
+⚙️ 配置说明
+bash
+cp app_client/.env.example app_client/.env
+cp app_server/.env.example app_server/.env
+编辑 .env 文件以设置：
+
+SERVER_IP: 服务端 IP 地址
+SERVER_PORT: 服务端监听端口
+LVGL_DISP_WIDTH/HEIGHT: 屏幕分辨率
+
+# 部分功能
+
+主界面
+<img width="1196" height="727" alt="QQ_1776513374905" src="https://github.com/user-attachments/assets/1f5e1c57-b0c3-49f0-a3d7-e956dc83c5b9" />
+
+私聊
+<img width="1833" height="730" alt="QQ_1776513506079" src="https://github.com/user-attachments/assets/a5370038-895b-4bdf-8ca2-9a3a631bafb6" />
+
+AI助手
+<img width="1191" height="733" alt="QQ_1776513656405" src="https://github.com/user-attachments/assets/2ba0398a-f834-404f-b663-402966030533" />
+
+
+# README
+
+
+

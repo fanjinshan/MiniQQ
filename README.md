@@ -1,4 +1,4 @@
-
+<img width="811" height="493" alt="QQ_1776513066416" src="https://github.com/user-attachments/assets/cb3b52c5-c21f-43b3-a22b-39ca8aa718bc" />
 # README
 
 ## 环境要求
@@ -47,5 +47,6 @@ adb push build/app/demo /usr/bin/
 修改后，记得保存，最好用reboot重启确保可以完全写入
 
 
+<img width="811" height="493" alt="QQ_1776513066416" src="https://github.com/user-attachments/assets/2693d304-d149-4e89-81e0-48882926da55" />
 
 ```
